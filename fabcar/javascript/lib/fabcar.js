@@ -154,7 +154,7 @@ class FabCar extends Contract {
         var carPayload = JSON.parse(payload);
         carPayload.docType='car';
 
-        await ctx.stub.putState(payload.carNumber, Buffer.from(JSON.stringify(carPayload)));
+        await ctx.stub.putState(carPayload.carNumber, Buffer.from(JSON.stringify(carPayload)));
         console.info('============= END : Create Car ===========');        
     }
 }
